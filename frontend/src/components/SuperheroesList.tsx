@@ -15,8 +15,8 @@ interface SuperheroesListProps {
 const SuperheroesList: React.FC<SuperheroesListProps> = ({ superheroes }) => {
 	return (
 		<div>
-			<h2>Superheroes List</h2>
-			<ul>
+			<h2 className="subtitle">Superheroes List</h2>
+			<ul className="list-items">
 				{superheroes.map((superhero, index) => (
 					<li key={index}>
 						<strong>{superhero.name}</strong> - {superhero.superpower} (Humility
