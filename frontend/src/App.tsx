@@ -36,23 +36,26 @@ const App: React.FC = () => {
 	};
 
 	return (
-		<div className="container">
-			{/* Form section on the left */}
-			<div className="form-container">
-				<h1>Superheroes App</h1>
-				{/* Pass addSuperhero function to AddSuperhero component */}
-				<AddSuperhero addSuperhero={addSuperhero} />
-			</div>
+		<>
+			<h1 className="title">Superheroes App</h1>
 
-			{/* Vertical separator (hidden on small screens) */}
-			<div className="separator"></div>
+			<div className="container">
+				{/* Form section on the left */}
+				<div className="form-container">
+					{/* Pass addSuperhero function to AddSuperhero component */}
+					<AddSuperhero addSuperhero={addSuperhero} />
+				</div>
 
-			{/* List section on the right */}
-			<div className="list-container">
-				{/* Pass the list of superheroes to SuperheroesList component */}
-				<SuperheroesList superheroes={superheroes} />
+				{/* Vertical separator (hidden on small screens) */}
+				<div className="separator"></div>
+
+				{/* List section on the right */}
+				<div className="list-container">
+					{/* Pass the list of superheroes to SuperheroesList component */}
+					<SuperheroesList superheroes={superheroes} />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
