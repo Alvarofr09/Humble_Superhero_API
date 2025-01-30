@@ -1,9 +1,9 @@
-// frontend/src/App.tsx
 import React, { useState, useEffect } from "react";
 import SuperheroesList from "./components/SuperheroesList";
 import AddSuperhero from "./components/AddSuperhero";
+import "./index.css";
 
-// Interfaz para describir la estructura de los datos del superhéroe
+// Interface to define the structure of a superhero object
 interface Superhero {
 	name: string;
 	superpower: string;
@@ -11,15 +11,15 @@ interface Superhero {
 }
 
 const App: React.FC = () => {
-	// Estado para almacenar la lista de superhéroes
+	// State to store the list of superheroes
 	const [superheroes, setSuperheroes] = useState<Superhero[]>([]);
 
-	// Obtener la lista de superhéroes del backend cuando se monta el componente
+	// Fetch superheroes from the backend when the component mounts
 	useEffect(() => {
 		fetchSuperheroes();
 	}, []);
 
-	// Función para obtener la lista de superhéroes del backend
+	// Function to fetch the list of superheroes from the backend
 	const fetchSuperheroes = async () => {
 		const response = await fetch("http://localhost:3000/superheroes");
 		if (response.ok) {
@@ -30,18 +30,28 @@ const App: React.FC = () => {
 		}
 	};
 
-	// Función para agregar un superhéroe y actualizar la lista
+	// Function to add a new superhero and update the list
 	const addSuperhero = (newSuperhero: Superhero) => {
 		setSuperheroes([...superheroes, newSuperhero]);
 	};
 
 	return (
-		<div>
-			<h1>Superheroes App</h1>
-			{/* Pasar la función addSuperhero y la lista de superhéroes al componente AddSuperhero */}
-			<AddSuperhero addSuperhero={addSuperhero} />
-			{/* Pasar la lista de superhéroes al componente SuperheroesList */}
-			<SuperheroesList superheroes={superheroes} />
+		<div className="container">
+			{/* Form section on the left */}
+			<div className="form-container">
+				<h1>Superheroes App</h1>
+				{/* Pass addSuperhero function to AddSuperhero component */}
+				<AddSuperhero addSuperhero={addSuperhero} />
+			</div>
+
+			{/* Vertical separator (hidden on small screens) */}
+			<div className="separator"></div>
+
+			{/* List section on the right */}
+			<div className="list-container">
+				{/* Pass the list of superheroes to SuperheroesList component */}
+				<SuperheroesList superheroes={superheroes} />
+			</div>
 		</div>
 	);
 };
