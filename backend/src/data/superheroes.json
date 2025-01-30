@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Superman",
+    "superpower": "Super strength, flight, x-ray vision",
+    "humilityScore": 5
+  },
+  {
+    "name": "Wonder Woman",
+    "superpower": "Super strength, flight, combat skills, lasso of truth",
+    "humilityScore": 8
+  },
+  {
+    "name": "Spider-Man",
+    "superpower": "Spider senses, wall crawling, web-shooting",
+    "humilityScore": 7
+  },
+  {
+    "name": "Iron Man",
+    "superpower": "Genius intellect, powered armor, flight",
+    "humilityScore": 4
+  },
+  {
+    "name": "Captain America",
+    "superpower": "Enhanced strength, agility, vibranium shield",
+    "humilityScore": 6
+  },
+  {
+    "name": "Black Panther",
+    "superpower": "Super strength, enhanced senses, vibranium suit",
+    "humilityScore": 7
+  },
+  {
+    "name": "The Flash",
+    "superpower": "Super speed, time travel, lightning manipulation",
+    "humilityScore": 9
+  },
+  {
+    "name": "Thor",
+    "superpower": "God of thunder, super strength, control over lightning",
+    "humilityScore": 6
+  },
+  {
+    "name": "Hulk",
+    "superpower": "Super strength, durability, gamma radiation",
+    "humilityScore": 3
+  },
+  {
+    "name": "Doctor Strange",
+    "superpower": "Master of magic, time manipulation, astral projection",
+    "humilityScore": 7
+  }
+]
