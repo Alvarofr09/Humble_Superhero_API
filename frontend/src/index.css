@@ -1,0 +1,102 @@
+/* * {
+	background: #ebdecf;
+} */
+
+/* Ensure the main container uses flexbox properly */
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch; /* Ensures all children stretch to the same height */
+	width: 90%;
+	margin: 20px auto;
+	height: auto; /* Allow it to adjust based on content */
+}
+
+/* Style the form section on the left */
+.form-container {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Style the input fields */
+input {
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #000;
+	width: 100%;
+}
+
+/* Style the list section on the right */
+.list-container {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Add a vertical separator between the form and list */
+.separator {
+	width: 2px;
+	background-color: #000;
+	min-height: 100%; /* Ensure it takes full height */
+	height: auto; /* Adjust dynamically */
+}
+
+.title {
+	font-size: 50px;
+	text-align: center;
+	margin: 20px;
+}
+
+.subtitle {
+	/* text-align: center; */
+}
+
+/* Style the button */
+
+button {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+}
+
+/* Add hover effect to the button */
+
+button:hover {
+	background-color: #0069d9;
+}
+
+/* Style the list items */
+
+.list-items {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.list-items li {
+	margin: 10px 0;
+}
+
+strong {
+	font-size: 1.25rem;
+}
+
+/* Responsive design: stack elements vertically on small screens */
+@media (max-width: 767px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.form-container,
+	.list-container {
+		width: 100%;
+	}
+	.separator {
+		display: none;
+	}
+}
